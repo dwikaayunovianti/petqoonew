@@ -11,7 +11,7 @@
             </button>
 
             <!-- Branding Image -->
-            <a style="color: #ff4a5a" class="navbar-brand" href="{{ url('/') }}">DocAppointment</a>
+            <a style="color: #ff4a5a" class="navbar-brand" href="{{ url('/') }}">PetQoo</a>
         </div>
 
         <div class="collapse navbar-collapse" id="app-navbar-collapse">

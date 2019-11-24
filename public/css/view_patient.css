@@ -4,7 +4,7 @@
 	width: 100%;
 	border-bottom-style: solid; 
 	text-align: left;
-	border-color: #357ed3;
+	border-color: #ff634A;
 }
 .pro_head h2{
 	font-family: 'Montserrat';
@@ -55,7 +55,7 @@
 .info_table tbody tr {
     border-bottom: 1px solid black;
 }
-.info_table td:first-child {color:#357ed3; max-width: 60px;}
+.info_table td:first-child {color:#ff634A; max-width: 60px;}
 
 
 

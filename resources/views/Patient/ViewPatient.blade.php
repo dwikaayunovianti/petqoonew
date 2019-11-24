@@ -28,7 +28,7 @@
         <div class="col-sm-3" align="center">
             <img src="{{ asset($Personal->img) }}" class="img-thumbnail" alt="Profile Pic" width="200" height="200">
             <p class="cls_phn_num"><span class="glyphicon glyphicon-phone-alt"
-                                         style="color: #357ed3;"></span>{{$Personal->phone}}</p>
+                                         style="color: #ff634A;"></span>{{$Personal->phone}}</p>
         </div>
         <div class="col-sm-6 ">
 

@@ -76,7 +76,6 @@
                                     <select class="form-control" id="gender" name="gender">
                                         <option value="Male" @if( old('gender')=="Male") selected @endif>Male</option>
                                         <option value="Female"  @if( old('gender')=="Female") selected @endif >Female</option>
-                                        <option value="Other"  @if( old('gender')=="Other") selected @endif >Other</option>
                                     </select>
                                 </div>
 

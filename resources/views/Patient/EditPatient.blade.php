@@ -127,7 +127,6 @@
                                 <select class="form-control" id="gender" name="gender">
                                     <option value="Male" @if( $Personal->gender=="Male") selected @endif>Male</option>
                                     <option value="Female"  @if( $Personal->gender=="Female") selected @endif >Female</option>
-                                    <option value="Other"  @if( $Personal->gender=="Other") selected @endif >Other</option>
                                 </select>
                             </div>
 

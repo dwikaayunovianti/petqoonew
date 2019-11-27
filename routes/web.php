@@ -29,6 +29,7 @@ Route::post('EditDocPass','DoctorController@EditPatientPassSubmit')->name('DocEd
 Route::post('AddDate','DoctorController@AddDateSubmit')->name('AddDate.Submit');
 Route::get('list/{id}','DoctorController@GetList')->name('serial.lsit');
 
+
 Route::get('PatientLogin','Auth\PatientLoginController@Login')->name('PatientLogin');
 Route::post('PatientLogin','Auth\PatientLoginController@LoginSubmit')->name('PatientLogin.Submit');
 Route::post('PatientLogout','Auth\PatientLoginController@logout')->name('PatientLogout');

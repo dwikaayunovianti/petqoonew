@@ -36,10 +36,16 @@
                 <table class="table info_table">
                     <tbody>
                     <tr>
-                        <td><strong>Name:</strong></td>
+                        <td>Nama:</td>
                         <td><strong>{{$Personal->fname.' '.$Personal->lname}}</strong></td>
                     </tr>
                    
+                    <tr>
+                        <td>Alamat:</td>
+                        <td>{{$Personal->alamat}}</td>
+                    </tr>
+
+
                     <tr>
                         <td>Email:</td>
                         <td>{{$Personal->email}}</td>
@@ -77,7 +83,7 @@
                 <table class="table info_table">
                     <tbody>
                     <tr>
-                        <td><strong>Nama Hewan:</strong></td>
+                        <td>Nama Hewan:\</td>
                         <td><strong>{{$Personal->pname.' '}}</strong></td>
                     </tr>
                     <tr>

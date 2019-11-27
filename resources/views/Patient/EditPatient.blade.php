@@ -217,6 +217,19 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('alamat') ? ' has-error' : '' }}">
+                            <label for="alamat" class="col-md-3 control-label">Alamat</label>
+
+                            <div class="col-md-8">
+                                <input id="alamat" type="text" class="form-control" name="alamat" value="{{ $Personal->alamat}}" required >
+
+                                @if ($errors->has('alamat'))
+                                    <span class="help-block">
+                                <strong>{{ $errors->first('alamat') }}</strong>
+                            </span>
+                                @endif
+                            </div>
+                        </div>
 
 
                         <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">

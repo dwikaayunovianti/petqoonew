@@ -83,7 +83,7 @@ h2 {
 </style>
 <div class="container">
   <br>
-    <h1 class="text-center" style="color: #ff4a5a"> <b> Welcome to PetQoo - RSH IPB University</b></h1>
+    <h1 class="text-center" style="color: #ff4a5a"> <b> Welcome to PetQoo</b></h1>
     <body>
     <span class="img-container"> <!-- Inline parent element -->
     <br>

@@ -17,16 +17,11 @@
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
-                <li><a style="color: #ff4a5a" style="hover:color:red" href="{{route('Doctors')}}">Cari Dokter Hewan</a></li>
-                <li><a style="color: #ff4a5a" style="hover:color:red" href="{{route('info')}}">Informasi</a></li>
+               
                 @if(Auth::guard('web')->check())
-                    <li class="dropdown">
-                        <a style="color: #ff4a5a" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin<span class="caret"></span>
-                        </a>
-
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{route('AdminAdd')}}">Add</a></li>
-                        </ul>
+                    
+                            <li><a href="{{route('AdminAdd')}}">Tambah</a></li>
+                     
                     </li>
                 @endif
             </ul>
@@ -35,6 +30,10 @@
             <ul class="nav navbar-nav navbar-right">
                 <!-- Authentication Links -->
                 @if(Auth::guard('doctor')->check())
+                
+                <li><a style="color: #ff4a5a" style="hover:color:red" href="{{route('Doctors')}}">Cari Dokter Hewan</a></li>
+               
+
                     <li class="dropdown">
                         <a style="color: #ff4a5a" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             {{ Auth::guard('doctor')->user()->name }} <span class="caret"></span>
@@ -56,12 +55,15 @@
                         </ul>
                     </li>
                 @elseif(Auth::guard('patient')->check())
+                <li><a style="color: #ff4a5a" style="hover:color:red" href="{{route('Doctors')}}">Cari Dokter Hewan</a></li>
+              <li><a style="color: #ff4a5a" style="hover:color:red" href="{{route('info')}}">Informasi</a></li>
                     <li class="dropdown">
                         <a style="color: #ff4a5a" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             {{ Auth::guard('patient')->user()->fname }} <span class="caret"></span>
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
+                            
                             <li><a href="{{route('ViewPatient', ['id' => Auth::guard('patient')->user()->id])}}">Profile</a></li>
                             <li>
                                 <a href="{{route('PatientLogout')}}"
@@ -97,13 +99,9 @@
                         </ul>
                     </li>
                 @elseif (Auth::guest())
-                    <li class="dropdown">
-                        <a style="color: #ff4a5a" class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="color: #ff4a5a" class="glyphicon glyphicon-user"></span> Sign Up
-                            <span style="color: #ff4a5a" class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{Route('PatientAdd')}}">Patient Register</a></li>
-                            <li><a href="{{Route('DocAdd')}}">Doctor Register</a></li>
-                        </ul>
+               
+                    <li><a href="{{Route('PatientAdd')}}"><span style="color: #ff4a5a" class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+                 
                     </li>
 
                     <li class="dropdown">

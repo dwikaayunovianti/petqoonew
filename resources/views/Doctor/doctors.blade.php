@@ -19,7 +19,7 @@
 @section('ContentOfBody')
     <div class="container">
         <div class=" col-sm-12 pro_head">
-            <h2>Doctors List.</h2>
+            <h2>Daftar nama dokter</h2>
         </div>
 
         <div class="col-sm-8 col-sm-offset-2">
@@ -27,7 +27,7 @@
                 <div class="col-lg-6">
                     <input type="hidden" name="_token" id="csrf" value="{{csrf_token()}}">
                     <select id="zone" class="form-control selectpicker" name="zone">
-                        <option value="">Choose Your Zone</option>
+                        <option value="">Lokasi</option>
                         @foreach($Zones as $zone)
                             <option value="{{$zone->district}}">{{$zone->district}}</option>
                         @endforeach
@@ -36,7 +36,7 @@
                 <div class="col-lg-6">
                     <input type="hidden" name="_token" id="csrf" value="{{csrf_token()}}">
                     <select id="category" class="form-control selectpicker" name="category">
-                        <option value="">Choose Category</option>
+                        <option value="">Pilih kategori</option>
                         @foreach($Categories as $category)
                             <option value="{{$category->Category}}">{{$category->Category}}</option>
                         @endforeach
@@ -51,7 +51,7 @@
         <br>
         <br>
         <br>
-        <h1 class="alert alert-success text-center">Choose Category Of Doctos.</h1>
+        <h1 class="alert alert-success text-center">Pilih kategori Dokter</h1>
     </div>
 
 

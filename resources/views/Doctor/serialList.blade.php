@@ -25,12 +25,12 @@
                     <img src="{{ asset($Doctor->img)}}" class="img-thumbnail" alt="Profile Pic" width="200"
                          height="200">
                     <div class="docInfo">
-                        <h2><strong><i>Name: </i></strong>{{$Doctor->name}}</h2>
-                        <h3><strong><i>Category: </i></strong>{{$Doctor->category}}</h3>
-                        <h4><strong><i>Date: </i></strong> {{$Date->serial_date}}</h4>
-                        <h4><strong><i>Start Time: </i></strong> {{$Date->start_time}}</h4>
-                        <h4><strong><i>End Time: </i></strong> {{$Date->end_time}}</h4>
-                        <p><strong><i>Chamber: </i> </strong>{{$Date->chember}}</p>
+                        <h2><strong><i>Nama: </i></strong>{{$Doctor->name}}</h2>
+                        <h3><strong><i>Kategori: </i></strong>{{$Doctor->category}}</h3>
+                        <h4><strong><i>Tanggal: </i></strong> {{$Date->serial_date}}</h4>
+                        <h4><strong><i>Waktu Mulai: </i></strong> {{$Date->start_time}}</h4>
+                        <h4><strong><i>Waktu Selesai: </i></strong> {{$Date->end_time}}</h4>
+                        <p><strong><i>Ruangan: </i> </strong>{{$Date->chember}}</p>
                     </div>
                 </div>
             </div>
@@ -45,9 +45,9 @@
                 <thead>
                     <tr>
                         <th>SL</th>
-                        <th>From:</th>
-                        <th>To:</th>
-                        <th>Patient</th>
+                        <th>Dari:</th>
+                        <th>Untuk:</th>
+                        <th>Pasien</th>
                     </tr>
                 </thead>
                 <tbody>

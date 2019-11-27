@@ -27,6 +27,23 @@
     -moz-box-shadow: 0 6px 6px -6px #0E1119;
     box-shadow: 0 6px 6px -6px #0E1119; 
 }
+
+
+.pro-info2{
+
+	font-size: 25px;
+	text-align: left;
+	padding-right: 10px;
+	border-radius: 5px;
+	background-color: rgb(242, 242, 242);
+	
+
+	-webkit-box-shadow: 0 6px 6px -6px #0E1119;
+    -moz-box-shadow: 0 6px 6px -6px #0E1119;
+    box-shadow: 0 6px 6px -6px #0E1119; 
+}
+
+
 .pro-info h1{
 	font-size: 20px;
 }

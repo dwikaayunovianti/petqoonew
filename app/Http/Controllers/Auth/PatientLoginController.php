@@ -54,6 +54,7 @@ class PatientLoginController extends Controller
             'fname' => 'required|string|max:20',
             'lname' => 'required|string|max:20',
             'email' => 'required|string|email|max:255|unique:patients',
+            'alamat' => 'required|string|max:20',
             'pname' => 'required|string|max:20',
             'jenishewan' => 'required|string|max:20',
             'ras' => 'required|string|max:20',
@@ -67,6 +68,7 @@ class PatientLoginController extends Controller
         $dbVar->email=$request['email'];
         $dbVar->fname=$request['fname'];
         $dbVar->lname=$request['lname'];
+        $dbVar->lname=$request['alamat'];
         $dbVar->pname = $request['pname'];
         $dbVar->jenishewan = $request['jenishewan'];
         $dbVar->ras = $request['ras'];

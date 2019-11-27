@@ -86,9 +86,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Add Another Date.</div>
                     <div class="panel-body">
-                        <p class="alert alert-danger"><strong>Alert!!!!</strong> <br> &nbsp &nbsp Be serious about the
-                            date. Once you add it then it never undo. So you must be over sure about the date.<br>&nbsp&nbsp&nbsp
-                            ----Thank You. :) </p>
+                        <p class="alert alert-danger"><strong> Masukan jadwal sesuai jam praktik </strong></p>
                         <form class="form-horizontal" method="POST" action="{{ route('AddDate.Submit') }}">
                             <input type="hidden" name="_token" value="{{csrf_token()}}">
                             <input type="hidden" name="doctor" value="{{$Personal->id}}">
@@ -203,11 +201,12 @@
                             <td>{{$date->end_time}}</td>
                             <td>{{$date->chember}}</td>
                             <td>
-                                <a href="{{route('bookSerial', ['id' => $date->id])}}" class="btn btn-success">Book
-                                    Serial</a>
+                                
                                 @if(Auth::guard('doctor')->check() && Auth::guard('doctor')->user()->id == $Personal->id )
                                     <a href="{{route('serial.lsit', ['id' => $date->id])}}" class="btn btn-primary">See
                                         List</a>
+                                    
+                                  
                                 @endif
                             </td>
                         </tr>

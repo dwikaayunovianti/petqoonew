@@ -27,7 +27,7 @@
                             <input type="hidden" name="_token" value="{{csrf_token()}}">
 
                             <div class="form-group {{ $errors->has('name') ? ' has-error' : '' }}">
-                                <label class="col-lg-3 control-label">Name:</label>
+                                <label class="col-lg-3 control-label">Nama:</label>
                                 <div class="col-lg-8">
                                     <input class="form-control" type="text" name="name" placeholder="Doctor's Name"  value="{{ old('name') }}" maxlength="49" required autofocus >
 

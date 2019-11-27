@@ -64,7 +64,7 @@ class CommonController extends Controller
 	        <br>
 	        <br>
 	        <br>
-	        <h1 class="alert alert-success text-center">We Are Sorry. Currently We have No Doctors Of This Category</h1>';
+	        <h1 class="alert alert-success text-center">Maaf, tidak dapat menemukan dokter pada kategori ini</h1>';
         }
 
         return $data;

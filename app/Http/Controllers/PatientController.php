@@ -58,7 +58,7 @@ class PatientController extends Controller
         $this->validate($request, [
             'fname' => 'required|string|max:20',
             'lname' => 'required|string|max:20',
-         
+            'alamat' => 'required|string|max:20',
             'phone' => 'required|numeric',
       
         ]);
@@ -67,6 +67,7 @@ class PatientController extends Controller
         $dbVar = patient::find($id);
         $dbVar->fname = $request['fname'];
         $dbVar->lname = $request['lname'];
+        $dbVar->alamat = $request['alamat'];
        
         $dbVar->phone = $request['phone'];
      

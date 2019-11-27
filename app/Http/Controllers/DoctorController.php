@@ -39,7 +39,6 @@ class DoctorController extends Controller
     }
 
 
-
     public function EditDoc()
     {
         $id = Auth::guard('doctor')->user()->id;

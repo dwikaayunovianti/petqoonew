@@ -18,6 +18,7 @@ class CreatePatientsTable extends Migration
             $table->string('email',150)->nullable(false)->unique();
             $table->string('fname', 20)->nullable(false);
             $table->string('lname', 20)->nullable(false);
+            $table->string('alamat', 20)->nullable(false);
             $table->string('gender', 10)->nullable(false);
             $table->unsignedInteger('age')->nullable(false);
             $table->string('phone', 11)->nullable(false);

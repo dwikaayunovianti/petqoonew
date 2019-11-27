@@ -18,6 +18,7 @@
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
                 <li><a style="color: #ff4a5a" style="hover:color:red" href="{{route('Doctors')}}">Cari Dokter Hewan</a></li>
+                <li><a style="color: #ff4a5a" style="hover:color:red" href="{{route('info')}}">Informasi</a></li>
                 @if(Auth::guard('web')->check())
                     <li class="dropdown">
                         <a style="color: #ff4a5a" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin<span class="caret"></span>

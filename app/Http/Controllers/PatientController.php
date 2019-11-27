@@ -45,23 +45,54 @@ class PatientController extends Controller
         return view('Patient.EditPatient')->with('Personal', $dbVar);
     }
 
+    public function Info()
+    {
+        $id = Auth::guard('patient')->user()->id;
+        $dbVar = patient::find($id);
+        return view('Info.info')->with('Personal', $dbVar);
+    }
+
+
     public function EditPatientSubmit(Request $request)
     {
         $this->validate($request, [
             'fname' => 'required|string|max:20',
             'lname' => 'required|string|max:20',
-            'gender' => 'required|string',
+         
             'phone' => 'required|numeric',
-            'age' => 'required|integer',
+      
         ]);
 
         $id = Auth::guard('patient')->user()->id;
         $dbVar = patient::find($id);
         $dbVar->fname = $request['fname'];
         $dbVar->lname = $request['lname'];
-        $dbVar->gender = $request['gender'];
+       
         $dbVar->phone = $request['phone'];
+     
+
+        $dbVar->save();
+
+        return redirect()->route('ViewPatient', ['id' => $id]);
+    }
+
+     public function EditPatientPetSubmit(Request $request)
+    {
+        $this->validate($request, [
+            'pname' => 'required|string|max:20',
+            'jenishewan' => 'required|string|max:20',
+            'ras' => 'required|string|max:20',
+            'age' => 'required|integer',
+            'gender' => 'required|string',
+        ]);
+
+        $id = Auth::guard('patient')->user()->id;
+        $dbVar = patient::find($id);
+        $dbVar->pname = $request['pname'];
+        $dbVar->jenishewan = $request['jenishewan'];
+        $dbVar->ras = $request['ras'];
         $dbVar->age = $request['age'];
+        $dbVar->gender = $request['gender'];
 
         $dbVar->save();
 

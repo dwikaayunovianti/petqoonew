@@ -55,6 +55,7 @@
             @endif
 
         </div>
+        
 
         <div class="col-sm-8 pro_info">
             @if(count($errors) > 0 || Session::has('no_match'))
@@ -67,10 +68,107 @@
 
             <ul class="nav nav-tabs">
                 <li class="active"><a data-toggle="tab" href="#basic">Basic</a></li>
+                <li><a data-toggle="tab" href="#pet">Pet</a></li>
                 <li><a data-toggle="tab" href="#pass">Password</a></li>
             </ul>
 
             <div class="tab-content">
+
+            <div id="pet" class="tab-pane fade"> 
+                    <br>
+                    <form class="form-horizontal" role="form" method="post" action="{{route('PatientPetEdit.Submit')}}">
+                        <input type="hidden" name="_token" value="{{csrf_token()}}">
+
+                            <div class="form-group{{ $errors->has('pname') ? ' has-error' : '' }}">
+                            <label for="pname" class="col-md-3 control-label">Nama Hewan</label>
+
+                            <div class="col-md-8">
+                                <input id="pname" type="text" class="form-control" name="pname" value="{{ $Personal->pname }}" required autofocus>
+
+                                @if ($errors->has('pname'))
+                                    <span class="help-block">
+                                <strong>{{ $errors->first('pname') }}</strong>
+                            </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('jenishewan') ? ' has-error' : '' }}">
+                            <label for="jenishewan" class="col-md-3 control-label"> Jenis hewan</label>
+
+                            <div class="col-md-8">
+                                <input id="jenishewan" type="text" class="form-control" name="jenishewan" value="{{ $Personal->jenishewan }}" required autofocus>
+
+                                @if ($errors->has('jenishewan'))
+                                    <span class="help-block">
+                                <strong>{{ $errors->first('jenishewans') }}</strong>
+                            </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('ras') ? ' has-error' : '' }}">
+                            <label for="ras" class="col-md-3 control-label"> Ras hewan</label>
+
+                            <div class="col-md-8">
+                                <input id="ras" type="text" class="form-control" name="ras" value="{{ $Personal->ras }}" required autofocus>
+
+                                @if ($errors->has('ras'))
+                                    <span class="help-block">
+                                <strong>{{ $errors->first('ras') }}</strong>
+                            </span>
+                                @endif
+                            </div>
+                        </div>
+                        
+   <div class="form-group{{ $errors->has('age') ? ' has-error' : '' }}">
+                            <label for="age" class="col-md-3 control-label">Usia</label>
+
+                            <div class="col-md-8">
+                                <input id="age" type="number" min="0" max="200" class="form-control" name="age" value="{{  $Personal->age }}" required >
+
+                                @if ($errors->has('age'))
+                                    <span class="help-block">
+                                <strong>{{ $errors->first('age') }}</strong>
+                            </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('gender') ? ' has-error' : '' }}">
+
+                        <label for="gender" class="col-md-3 control-label">Gender</label>
+
+                          <div class="col-md-8">
+                              <select class="form-control" id="gender" name="gender">
+                              <option value="Male" @if( $Personal->gender=="Male") selected @endif>Male</option>
+                               <option value="Female"  @if( $Personal->gender=="Female") selected @endif >Female</option>
+                               <option value="Other"  @if( $Personal->gender=="Other") selected @endif >Other</option>
+                           </select>
+                                  </div>
+
+                                 @if ($errors->has('gender'))
+                                 <span class="help-block">
+                                 <strong>{{ $errors->first('gender') }}</strong>
+                                </span>
+                                  @endif
+                                   </div>
+                     
+                        <div class="form-group">
+                            <label class="col-md-3 control-label"></label>
+                            <div class="col-md-8">
+                                <input type="submit" class="btn btn-primary" value="Update Pet">
+                                <span></span>
+                                {{-- <input type="reset" class="btn btn-default" value="Cancel"> --}}
+                            </div>
+                            </div>
+                        
+                    </form>
+                    </div>
+
+
+
+
                 <div id="basic" class="tab-pane fade in active">
                     <br>
                     <form class="form-horizontal" role="form" method="post" action="{{route('PatientEdit.Submit')}}">
@@ -119,23 +217,6 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('gender') ? ' has-error' : '' }}">
-
-                            <label for="gender" class="col-md-3 control-label">Gender</label>
-
-                            <div class="col-md-8">
-                                <select class="form-control" id="gender" name="gender">
-                                    <option value="Male" @if( $Personal->gender=="Male") selected @endif>Male</option>
-                                    <option value="Female"  @if( $Personal->gender=="Female") selected @endif >Female</option>
-                                </select>
-                            </div>
-
-                            @if ($errors->has('gender'))
-                                <span class="help-block">
-                            <strong>{{ $errors->first('gender') }}</strong>
-                        </span>
-                            @endif
-                        </div>
 
 
                         <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
@@ -152,19 +233,6 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('age') ? ' has-error' : '' }}">
-                            <label for="age" class="col-md-3 control-label">Age</label>
-
-                            <div class="col-md-8">
-                                <input id="age" type="number" min="0" max="200" class="form-control" name="age" value="{{  $Personal->age }}" required >
-
-                                @if ($errors->has('age'))
-                                    <span class="help-block">
-                                <strong>{{ $errors->first('age') }}</strong>
-                            </span>
-                                @endif
-                            </div>
-                        </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label"></label>
                             <div class="col-md-8">

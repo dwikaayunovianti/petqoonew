@@ -68,6 +68,50 @@
                                 </div>
                             </div>
 
+
+                            <div class="form-group{{ $errors->has('pname') ? ' has-error' : '' }}">
+                                <label for="pname" class="col-md-4 control-label">Nama Hewan</label>
+
+                                <div class="col-md-6">
+                                    <input id="pname" type="text" class="form-control" name="pname" value="{{ old('pname') }}" required >
+                                    
+                                      @if ($errors->has('pname'))
+                                    <span class="help-block">
+                                <strong>{{ $errors->first('pname') }}</strong>
+                            </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('jenishewan') ? ' has-error' : '' }}">
+                                <label for="jenishewan" class="col-md-4 control-label">Jenis Hewan</label>
+
+                                <div class="col-md-6">
+                                    <input id="jenishewan" type="text" class="form-control" name="jenishewan" value="{{ old('jenishewan') }}" required >
+                                    
+                                @if ($errors->has('jenishewan'))
+                                    <span class="help-block">
+                                <strong>{{ $errors->first('jenishewans') }}</strong>
+                            </span>
+                                @endif
+                            </div>
+                        </div>
+
+
+                        <div class="form-group{{ $errors->has('ras') ? ' has-error' : '' }}">
+                                <label for="ras" class="col-md-4 control-label">Ras Hewan</label>
+
+                                <div class="col-md-6">
+                                    <input id="ras" type="text" class="form-control" name="ras" value="{{ old('ras') }}" required >
+                        
+                                @if ($errors->has('ras'))
+                                    <span class="help-block">
+                                <strong>{{ $errors->first('ras') }}</strong>
+                            </span>
+                                @endif
+                            </div>
+                        </div>
+                        
                             <div class="form-group{{ $errors->has('gender') ? ' has-error' : '' }}">
 
                                 <label for="gender" class="col-md-4 control-label">Gender</label>

@@ -23,6 +23,9 @@ class CreatePatientsTable extends Migration
             $table->string('phone', 11)->nullable(false);
             $table->string('password')->nullable(false);
             $table->string('img', 50)->nullable(false)->default("image/patient.jpg");
+            $table->string('pname', 20)->nullable(false);
+            $table->string('jenishewan', 20)->nullable(false);
+            $table->string('ras', 20)->nullable(false);
             $table->rememberToken();
             $table->timestamps();
         });

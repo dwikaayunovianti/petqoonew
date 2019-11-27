@@ -39,21 +39,62 @@
                         <td><strong>Name:</strong></td>
                         <td><strong>{{$Personal->fname.' '.$Personal->lname}}</strong></td>
                     </tr>
-                    <tr>
-                        <td>Gender:</td>
-                        <td>{{$Personal->gender}}</td>
-                    </tr>
+                   
                     <tr>
                         <td>Email:</td>
                         <td>{{$Personal->email}}</td>
                     </tr>
-                    <tr>
-                        <td>Age:</td>
-                        <td>{{$Personal->age}}</td>
-                    </tr>
+        
                     <tr>
                         <td>Mobile:</td>
                         <td>{{$Personal->phone}}</td>
+                    </tr>
+                    <tr></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class=" col-sm-12 pro_head clearfix">
+            <h2 class="pull-left"><strong>{{ $Personal->pname}}'s</strong> Profile</h2>
+            <h2 class="pull-right">
+                @if(Auth::guard('patient')->check() && Auth::guard('patient')->user()->id == $Personal->id )
+                    <a href="{{ route('PatientEdit')}}" data-toggle="tooltip" data-placement="bottom" title="Edit"><span
+                                class="glyphicon glyphicon-edit"></span></a>
+                @endif
+            </h2>
+        </div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-3" align="center">
+           
+        </div>
+        <div class="col-sm-6 ">
+
+            <div class="pro-info">
+                <table class="table info_table">
+                    <tbody>
+                    <tr>
+                        <td><strong>Nama Hewan:</strong></td>
+                        <td><strong>{{$Personal->pname.' '}}</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Jenis hewan:</td>
+                        <td>{{$Personal->jenishewan}}</td>
+                    </tr>
+                    <tr>
+                        <td>Ras:</td>
+                        <td>{{$Personal->ras}}</td>
+                    </tr>
+                    <tr>
+                        <td>Usia Hewan:</td>
+                        <td>{{$Personal->age}}</td>
+                    </tr>
+                    <tr>
+                        <td>Gender:</td>
+                        <td>{{$Personal->gender}}</td>
                     </tr>
                     <tr></tr>
                     </tbody>

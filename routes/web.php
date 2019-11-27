@@ -14,6 +14,7 @@
 Route::get('error','CommonController@Error')->name('error');
 Route::get('/doctors','CommonController@ShowDoctors')->name('Doctors');
 Route::post('/doctors','CommonController@Doctors');
+Route::get('/Info','PatientController@Info')->name('info');
 
 Route::get('DocLogin','Auth\DoctorLoginController@Login')->name('DocLogin');
 Route::post('DocLogin','Auth\DoctorLoginController@LoginSubmit')->name('DocLogin.Submit');
@@ -36,6 +37,9 @@ Route::get('NewPatient','Auth\PatientLoginController@AddPatient')->name('Patient
 Route::post('NewPatient','Auth\PatientLoginController@AddPatientSubmit')->name('PatientAdd.Submit');
 Route::get('EditPatient','PatientController@EditPatient')->name('PatientEdit');
 Route::post('EditPatient','PatientController@EditPatientSubmit')->name('PatientEdit.Submit');
+
+Route::post('EditPatientPet','PatientController@EditPatientPetSubmit')->name('PatientPetEdit.Submit');
+
 Route::post('EditPatientPic','PatientController@EditPatientPicSubmit')->name('PatientEditPic.Submit');
 Route::post('EditPatientPass','PatientController@EditPatientPassSubmit')->name('PatientEditPass.Submit');
 Route::get('bookSerial/{id}','PatientController@bookSerial')->name('bookSerial');
